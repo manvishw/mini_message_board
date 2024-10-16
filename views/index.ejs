@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-</head>
-<body>
+    <style>
+      a{
+        text-decoration: none;
+        font-size: larger;
+        color: red;
+        font-weight: 900;
+      }
+      a:active{
+        color: black;
+      }
+      a:visited{
+        color: black;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      thead {
+        background-color: rgb(243, 243, 13);
+        border: 4px solid yellow;
+      }
+      tbody {
+        background-color: rgba(64, 122, 64, 0.575);
+      }
+      tr,
+      td {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/clear">Clear</a>
     <h1>Homepage</h1>
-</body>
+
+    <table>
+      <thead>
+        <td>Author</td>
+        <td>Message</td>
+        <td>Added Date</td>
+      </thead>
+      <tbody>
+        <% messages.forEach((message)=>{ %>
+        <tr>
+          <td><%= message.user %></td>
+          <td><%= message.text %></td>
+          <td><%= message.added %></td>
+        </tr>
+
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
 </html>
