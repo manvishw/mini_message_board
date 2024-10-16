@@ -1,0 +1,17 @@
+{
+  "name": "mini_message_board",
+  "version": "1.0.0",
+  "description": "Mini Message Board Web Site With using Node.js and Express Framework.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
